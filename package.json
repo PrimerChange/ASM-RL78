@@ -1,5 +1,5 @@
 {
-    "name": "ASM-RL78",
+    "name": "asm-rl78",
     "displayName": "asm(RL78)",
     "description": "language support for RL78",
     "version": "0.0.1",
@@ -10,16 +10,28 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "ASM(RL78)",
-            "aliases": ["ASM(RL78)", "ASM(RL78)"],
-            "extensions": [".asm"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ASM(RL78)",
-            "scopeName": "source.asm",
-            "path": "./syntaxes/ASM(RL78).tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "ASM(RL78)",
+                "aliases": [
+                    "ASM(RL78)",
+                    "ASM(RL78)"
+                ],
+                "extensions": [
+                    ".asm"
+                ],
+                "activationEvents": [
+                    "onLanguage:json"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ASM(RL78)",
+                "scopeName": "source.asm",
+                "path": "./syntaxes/ASM(RL78).tmLanguage.json"
+            }
+        ]
     }
 }
