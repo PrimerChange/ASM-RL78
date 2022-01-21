@@ -27,7 +27,7 @@ function provideDefinition(document, position, token) {
         console.log('line: ' + line.text); // 当前光标所在行
         console.log('projectPath: ' + projectPath); // 当前工程目录
         // 只处理package.json文件
-        if (/\/package\.json$/.test(fileName)) {
+        if (/\/package\.asm$/.test(fileName)) {
                 console.log(word, line.text);
                 const json = document.getText();
                 if (new RegExp(`"(dependencies|devDependencies)":\\s*?\\{[\\s\\S]*?${word.replace(/\//g, '\\/')}[\\s\\S]*?\\}`, 'gm').test(json)) {
